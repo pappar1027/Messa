@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    padding: 1em 0;
+    /*text-align: center;*/
+}
+#logo{
+    display: block;
+    margin: auto;
+    padding: 20px;
+
+}
+.container{
+    margin: 0 10%;
+
+}
+.container p{
+    color: darkslategray;
+}
+.container h2, .container h3, h4{
+    color: darkseagreen;
+}
+/*input {*/
+    /*width: 50%;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+/*}*/
+
+/*}*/
+ul {
+
+    list-style-type: none;
+    /*margin-left: 5%;*/
+    margin: auto;
+    /*margin-right: 10%;*/
+    overflow: hidden;
+    /*position: fixed;*/
+    top:100px;
+    /*width:100%;*/
+
+
+}
+
+li {
+    float:left;
+
+}
+
+li a {
+    position: relative;
+    display: block;
+    color: gray;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 14px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: cadetblue;
+}
+.bar{
+    margin: 2em auto;
+    text-align: center;
+}
+.progress-bar {
+
+    margin: auto;
+    width: 50%;
+    /*color:gray;*/
+}
+#introduction{
+    background-color:cadetblue;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 2em;
+    margin-right: 10%;
+    padding: 20px;
+}
+#introduction h2, #introduction p{
+    color:whitesmoke;
+}
+.normaltext{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+/*#columns{*/
+    /*-webkit-column-count: 2; !* Chrome, Safari, Opera *!*/
+    /*-moz-column-count: 2; !* Firefox *!*/
+    /*column-count: 2;*/
+    /*-webkit-column-gap: 40px;*/
+    /*-moz-column-gap: 40px;*/
+    /*column-gap: 40px;*/
+/*}*/
+table{
+    margin: 1em;
+    
+
+}
+
+
+#form-entry{
+    background-color: beige;
+    border-radius: 10px;
+
+}
+form {
+    width: 330px;
+
+    /*margin: 17% auto;*/
+}
+
+
+#donation-form {
+    display: flex;
+    align-items: center;
+}
+#donationamount{
+    border-radius: 5px;
+    background: white;
+}
+
+
+
+#submit {
+    margin-left: 100px;
+    margin-top:20px;
+
+    height: 46px;
+    background: orange;
+    font-family: inherit;
+    font-weight: bold;
+    
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+
+
+
+
+input:focus {
+    outline: none;
+    outline: 2px solid seagreen;
+    box-shadow: 0 0 2px seagreen;
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css"> -->
+    
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" href="Messa-logo-final.png">
+    <title>Messa Item page</title>
+    <!-- bootstrap templates -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<!-- <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+  <!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--TODO:set the shortcut icon -->
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" >
+	function calculateRice() {
+		
+		var donation = document.donationbox.amount.value;
+		var rice=Math.round(eval(donation/2.58)*100)/100;
+		
+		document.getElementById('update').innerHTML = rice;}
+	</script>
+
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    padding: 1em 0;
+    /*text-align: center;*/
+}
+#logo{
+    display: block;
+    margin: auto;
+    padding: 20px;
+
+}
+#storyPhoto{
+  padding-right: 1em;
+}
+
+.container p{
+    color: darkslategray;
+}
+.container h2, .container h3, h4{
+    color: darkseagreen;
+}
+
+
+ul {
+
+    list-style-type: none;
+    /*margin-left: 5%;*/
+    margin: auto;
+    /*margin-right: 10%;*/
+    overflow: hidden;
+    /*position: fixed;*/
+    top:100px;
+    /*width:100%;*/
+
+
+}
+
+li {
+    float:left;
+
+}
+
+li a {
+    position: relative;
+    display: block;
+    color: gray;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 14px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: cadetblue;
+}
+
+.progress-bar {
+
+    margin: auto;
+    width: 50%;
+    /*color:gray;*/
+}
+#introduction{
+    background-image:url("http://i65.tinypic.com/ztf5m8.jpg");
+    background-repeat: no-repeat;
+    background-position: top-;
+    
+    text-align: left;
+    /*margin-left: 10%;*/
+    margin-top: 2em;
+    /*margin-right: 10%;*/
+    padding: 60px;
+}
+#introduction h2, #introduction p{
+    color:whitesmoke;
+}
+
+
+.normaltext{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+/*#columns{*/
+    /*-webkit-column-count: 2; !* Chrome, Safari, Opera *!*/
+    /*-moz-column-count: 2; !* Firefox *!*/
+    /*column-count: 2;*/
+    /*-webkit-column-gap: 40px;*/
+    /*-moz-column-gap: 40px;*/
+    /*column-gap: 40px;*/
+/*}*/
+
+
+
+#form-entry{
+    background-color: beige;
+    border-radius: 10px;
+
+}
+
+
+input:focus {
+    outline: none;
+    outline: 2px solid seagreen;
+    box-shadow: 0 0 2px seagreen;
+}
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 15em auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transition: all 200ms;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  
+  max-height: 30%;
+  overflow: auto;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default  navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img alt="Messa logo" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png" width="35" height="28">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="Itempage.html"> Donate</a></li>
+        <li><a href="Itempage.html">Transparency</a></li>
+        <li><a href="Itempage.html">Beneficiaries</a></li>
+        <li><a href="Itempage.html">Partners</a></li>
+        <li><a href="Itempage.html">Merchandise</a></li>
+        <li><a href="Itempage.html">About Us</a></li>
+        <li><a href="Itempage.html">
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Log in
+      </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+
+
+
+<!-- <div >
+    <ul>
+        <li><a href="Itempage.html"> Donate</a></li>
+        <li><a href="Itempage.html">Transparency</a></li>
+        <li><a href="Itempage.html">Beneficiaries</a></li>
+        <li><a href="Itempage.html">Partners</a></li>
+        <li><a href="Itempage.html">Merchandise</a></li>
+        <li><a href="Itempage.html">About Us</a></li>
+    </ul>
+    <hr>
+</div> -->
+
+
+
+<div id="introduction">
+    <h2>Flour = life + income</h2>
+    <br>
+    <br>
+    <p class="normaltext">180 families in Karmukti Village, Central Java, Indonesia, do not have the ability to buy any flour that is very crucial for their economy as crackers makers.<br>
+    Most of them have been living with just 5 cents a day.</p>
+
+</div>
+<br>
+<br>
+<div class="container">
+<label id = "funded_percentage" class="text-info">Funded:</label>
+  <div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;" id = "funded_bar">
+    60%
+  </div>
+</div>
+</div>
+</div>
+<div class="container">
+<label id = "supplied_percentage" class="text-info">Supplied</label>
+  <div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;" id = "supplied_bar">
+    10%
+  </div>
+</div>
+</div>
+
+</div>
+
+<!-- <div class="progress-bar -large" id="funded">
+    <span  id = "funded_bar" class="progress" style="width: 0%;background-color: darkseagreen" ></span>
+</div> -->
+<br>
+<br>
+
+<div class="container">
+<div class="row container">
+<div class="col-xs-12 col-md-6 jumbotron">
+        <form action="" method="post" name="donationbox">
+        <div class="input-group" id="donation-form">
+  <span class="input-group-addon">$</span>
+  <input type="number" id="donationamount" name="amount" placeholder="Enter Your Donation in USD" onkeyup="calculateRice()" onmouseup="calculateRice()" class="form-control" aria-label="Amount (to the nearest dollar)">
+</div>
+            <div>
+                <span id="update"> 0</span>kg of rice will be donated.
+                <br>
+                <br>
+                <button type="button" class="btn btn-warning btn-lg" onclick="return donate()" id="submit">Donate </button>
+                </div>
+
+<!--             <div id="donation-form">
+                $<input type="number" id="donationamount" name="amount" placeholder="Enter Your Donation in USD" onkeyup="calculateRice()" onmouseup="calculateRice()">
+            </div>
+            <div>
+                <span id="update"> 0</span>kg of rice will be donated.
+                <button class="button" onclick="return donate()" id="submit">Donate </button>
+                </div> -->
+        </form>
+</div>
+
+<div class="col-xs-12 col-md-6">
+        <h4>Stakeholders</h4>
+            <p>ABC, Roda Tiga, OT</p>
+            <h4>Partners</h4>
+            <p>Red Cross Indonesia, Koperasi</p>
+            <h4>Needs</h4>
+            <p>Flour, oil, pans</p>
+</div>
+
+</div>
+</div>
+
+<br>
+<div class="container">
+    <h2>Story</h2>
+    <img src="http://i66.tinypic.com/k3vdbn.jpg" align="left" id="storyPhoto">
+    <p class="normaltext text-justify">This is Maimunh, from the city of Kramukti, she and 200 other women with their families have been struck with bad economy. The hike on the price of flour prevent them from doing what they usually do, making prawn crackers. Their only source of income, and their main food commodity.<br>
+
+This have caused 300 children under 15 to be in the merge of starvation purely due to the financial problems, some even have to work on their own just to be able to eat as their parents are not able to buy them food.<br>
+
+As their main income source, the making prawn crackers have to continue. And with your help MESSA together with the United Koperasi, and Red Cross would be able to provide the, with a more efficient way making these crackers. With every $1 you donated there is a high chance you created $3.5 impact on a family.<br>
+
+We are working with the biggest and the most inclusive flour producers in Indonesia to be able to lower the price of flour for our friends in need as to achieve the least fund wastage. All 100% of your donation for this mission will be used for the mission and not our own operational costs. Thank you for your donation, with your help 180 families now could have a chance to live the life that they had before, or even better life.</p>
+</div>
+<br>
+
+
+<div class="container">
+    <h2>Funding Details</h2>
+    <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+      <div class="caption">
+        <h3>Company A</h3>
+        <p>Amount of supply: 100 kg<br>
+                        Price of transport: $15.00<br>
+                    Price per unit amount:$1.20</p>
+        <span class="label label-primary">Sent</span>
+        <span class="label label-success">Received</span>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+      <div class="caption">
+        <h3>Company B</h3>
+        <p>Amount of supply: 140 kg<br>
+                        Price of transport: $20.00<br>
+                    Price per unit amount:$1.32</p>
+        <span class="label label-primary">Sent</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+      <div class="caption">
+        <h3>Company C</h3>
+        <p>Amount of supply: 140 kg<br>
+                        Price of transport: $20.00<br>
+                    Price per unit amount:$1.32</p>
+        <span class="label label-primary">Sent</span>
+        <span class="label label-success">Received</span>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+
+<br>
+<div class="container">
+    <h3>Verified by</h3>
+    <p class="normaltext">Matias (Koperasi)
+    </p>
+</div>
+<br>
+<div class="container">
+    <h3>Distributed by</h3>
+    <p class="normaltext">Almudin (Red Cross)
+    </p>
+</div>
+
+<!-- popup -->
+<div id="message" class="overlay">
+	<div class="popup">
+		<h2 id="popupheader">Thank you</h2>
+		<a class="close" a href="#">&times;</a>
+		<div class="content" id="popupcontent">
+			You have successfully donated.
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<script type = "application/javascript">
+window.onload = function() {  //load progress bar on start
+  loadJSON();  
+};
+var width = 1;
+var id = setInterval(loadJSON, 5000);
+
+	
+
+
+	function donate(){
+		var amount = parseFloat(document.donationbox.amount.value);
+		var popupcontent = document.getElementById("popupcontent");
+		var popupheader = document.getElementById("popupheader");
+		console.log(isNaN(amount));
+		if (amount<=0 ||isNaN(amount)){
+			window.location.href = '#message';
+			popupheader.innerHTML = "Oops!"
+			popupcontent.innerHTML = "Please check the amount you have enter";
+			return false;
+		}
+		else{	//if positive	
+			var http = new XMLHttpRequest();
+			var url = "/campaigns/1/post/";
+			var params = {"add_current_amount":amount};
+			
+			console.log("weww");
+			http.open("POST", url);
+			http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			http.send(JSON.stringify(params));
+		
+			
+			//Send the proper header information along with the request
+			
+			http.onreadystatechange = function() {//Call a function when the state changes.
+				console.log("status:"+http.status);
+				console.log("state:"+http.readyState);
+				if(http.readyState == 4 && http.status == 200) {
+					window.location.href = '#message';
+					console.log(http.responseText);
+					loadJSON();
+					popupheader.innerHTML = "Success!"
+					popupcontent.innerHTML = "Thank you, you have successfully donated $"+amount;
+				}
+				if(http.status!=200){
+					window.location.href = '#message';
+					popupheader.innerHTML = "Oops!"
+					popupcontent.innerHTML = "There seems to be an error, please try again";
+					}
+				return false
+			}
+		}
+		return false;
+	
+	}
+	
+
+
+
+	
+	
+	
+         function loadJSON(){
+			var elem = document.getElementById("funded_bar");
+            var data_file = "/campaigns/1/get/";
+            var http_request = new XMLHttpRequest();
+            try{
+               // Opera 8.0+, Firefox, Chrome, Safari
+               http_request = new XMLHttpRequest();
+            }catch (e){
+               // Internet Explorer Browsers
+               try{
+                  http_request = new ActiveXObject("Msxml2.XMLHTTP");
+
+               }catch (e) {
+
+                  try{
+                     http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e){
+                     // Something went wrong
+                     alert("Your browser broke!");
+                     return false;
+                  }
+
+               }
+            }
+
+            http_request.onreadystatechange = function(){
+
+               if (http_request.readyState == 4  ){
+                  // Javascript function JSON.parse to parse JSON data
+                  var jsonObj = JSON.parse(http_request.responseText);
+
+                  // jsonObj variable now contains the data structure and can
+                  // be accessed as jsonObj.name and jsonObj.country.
+				  width = jsonObj.percentage_complete;
+
+                  document.getElementById("funded_percentage").innerHTML ="Funded: "+width+"%";
+                  elem.style.width = width + '%';
+               }
+            }
+
+            http_request.open("GET", data_file, true);
+            http_request.send();
+         }
+
+ </script>
+
+</html>

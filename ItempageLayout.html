@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
+    <!-- <link rel="stylesheet" href="itempage.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" href="Messa-logo-final.png">
+    <title>Messa Item page</title>
+    <!--TODO:set the shortcut icon -->
+    <!--TODO: use @import url(http://fonts.googleapis.com/css?family=Montserrat);-->
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- <script type="text/javascript" src="itempage.js"></script> -->
+
+
+</head>
+<body>
+
+<img id="logo" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png" alt="Messa logo" width="200" height="175" align="center">
+<!--navigation bar-->
+<!--TODO:center the navigation bar-->
+<div >
+    <ul>
+        <li><a href="Itempage.html"> Donate</a></li>
+        <li><a href="Itempage.html">Transparency</a></li>
+        <li><a href="Itempage.html">Beneficiaries</a></li>
+        <li><a href="Itempage.html">Partners</a></li>
+        <li><a href="Itempage.html">Merchandise</a></li>
+        <li><a href="Itempage.html">About Us</a></li>
+    </ul>
+    <hr>
+</div>
+
+
+
+<div id="introduction">
+    <h2>Napkins for life</h2>
+    <p class="normaltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</div>
+
+<div class="bar">
+    <label id = "funded_percentage">Funded:</label>
+<div class="progress-bar -large" id="funded">
+    <span id = "funded_bar" class="progress" style="width: 0%;background-color: darkseagreen" ></span>
+</div>
+
+</div>
+<div class="bar">
+    <label>Supplied: 10%</label>
+<div class="progress-bar -large" id="supplied">
+    <span class="progress" style="width: 10%;background-color: darkseagreen"></span>
+</div>
+</div>
+
+<table class="container">
+    <tr>
+        
+            <td id="form-entry">
+
+        <form action="#" method="post" name="donationbox">
+            <div id="donation-form">
+                <input type="number" id="donationamount" name="amount" placeholder="Enter Your Donation in USD" onkeyup="calculateRice()">
+            </div>
+            <div>
+               <span id="update"> 0</span>kg of rice will be donated.
+               
+                <input type="submit" class="button" id="submit" value="DONATE">
+            </div>
+        </form>
+
+    
+
+
+        </td>
+        <td>
+            <h4>Stakeholders</h4>
+            <p>Lorem ipsum dolor sit amet</p>
+            <h4>Partners</h4>
+            <p>Lorem ipsum dolor sit amet</p>
+            <h4>Needs</h4>
+            <p>Lorem ipsum dolor sit amet</p>
+
+        </td>
+    </tr>
+</table>
+<br>
+<div class="container">
+    <h2>Story</h2>
+    <p class="normaltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<br>
+<div class="container">
+    <h2>Funding Details</h2>
+    <div grid>
+        <div column>
+            <div class="card-box">
+                <div class="header">
+                    Company A
+                </div>
+                <img class="image" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+                <div class="card-content">
+                    <p class="content">Amount of supply: xx<br>
+                        Price of transport: xx<br>
+                    Price per unit amount:xx</p>
+                    <span class="tag-box -success">Sent</span>
+                    <span class="tag-box -success">Received</span>
+
+                </div>
+
+            </div>
+        </div>
+        <div column>
+            <div class="card-box">
+                <div class="header">
+                    Company B
+                </div>
+                <img class="image" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+                <div class="card-content">
+                    <p class="content">Amount of supply: xx<br>
+                        Price of transport: xx<br>
+                        Price per unit amount:xx</p>
+                </div>
+            </div>
+        </div>
+        <div column>
+            <div class="card-box">
+                <div class="header">
+                    Company C
+                </div>
+                <img class="image" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+                <div class="card-content">
+                    <p class="content">Amount of supply: xx<br>
+                        Price of transport: xx<br>
+                        Price per unit amount:xx</p>
+                    <span class="tag-box -success">Sent</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br>
+
+    <div grid>
+        <div column>
+            <div class="card-box">
+                <div class="header">
+                    Company D
+                </div>
+                <img class="image" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_1440,w_720,f_auto/v1/887545/Messa-logo-final_bntnec.png">
+                <div class="card-content">
+                    <p class="content">Amount of supply: xx<br>
+                        Price of transport: xx<br>
+                        Price per unit amount:xx</p>
+                </div>
+            </div>
+        </div>
+        <div column>
+
+        </div>
+
+        <div column>
+
+        </div>
+
+
+    </div>
+</div>
+<br>
+<div class="container">
+    <h3>Verified by</h3>
+    <p class="normaltext">Lorem ipsum dolor sit amet,
+    </p>
+</div>
+<br>
+<div class="container">
+    <h3>Distributed by</h3>
+    <p class="normaltext">Lorem ipsum dolor sit amet,
+    </p>
+</div>
+
+
+
+
+</body>
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    padding: 1em 0;
+    /*text-align: center;*/
+}
+#logo{
+    display: block;
+    margin: auto;
+    padding: 20px;
+
+}
+.container{
+    margin: 0 10%;
+
+}
+.container p{
+    color: darkslategray;
+}
+.container h2, .container h3, h4{
+    color: darkseagreen;
+}
+/*input {*/
+    /*width: 50%;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+/*}*/
+
+/*}*/
+ul {
+
+    list-style-type: none;
+    /*margin-left: 5%;*/
+    margin: auto;
+    /*margin-right: 10%;*/
+    overflow: hidden;
+    /*position: fixed;*/
+    top:100px;
+    /*width:100%;*/
+
+
+}
+
+li {
+    float:left;
+
+}
+
+li a {
+    position: relative;
+    display: block;
+    color: gray;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 14px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: cadetblue;
+}
+.bar{
+    margin: 2em auto;
+    text-align: center;
+}
+.progress-bar {
+
+    margin: auto;
+    width: 50%;
+    /*color:gray;*/
+}
+#introduction{
+    background-color:cadetblue;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 2em;
+    margin-right: 10%;
+    padding: 20px;
+}
+#introduction h2, #introduction p{
+    color:whitesmoke;
+}
+.normaltext{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+/*#columns{*/
+    /*-webkit-column-count: 2; !* Chrome, Safari, Opera *!*/
+    /*-moz-column-count: 2; !* Firefox *!*/
+    /*column-count: 2;*/
+    /*-webkit-column-gap: 40px;*/
+    /*-moz-column-gap: 40px;*/
+    /*column-gap: 40px;*/
+/*}*/
+table{
+    margin: 1em;
+    
+
+}
+
+
+#form-entry{
+    background-color: beige;
+    border-radius: 10px;
+
+}
+form {
+    width: 330px;
+
+    /*margin: 17% auto;*/
+}
+
+
+#donation-form {
+    display: flex;
+    align-items: center;
+}
+#donationamount{
+    border-radius: 5px;
+    background: white;
+}
+
+
+
+#submit {
+    margin-left: 100px;
+    margin-top:20px;
+
+    height: 46px;
+    background: orange;
+    font-family: inherit;
+    font-weight: bold;
+    
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+</style>
+<script type="text/javascript">
+    function calculateRice() {
+        
+        var donation = document.donationbox.amount.value;
+        var rice=Math.round(eval(donation/2.58)*100)/100;
+        
+        document.getElementById('update').innerHTML = rice;}
+</script>
+
+<script type = "application/javascript">
+	
+	var width = 1;
+	var id = setInterval(loadJSON, 5000);
+	loadJSON();
+         function loadJSON(){
+			var elem = document.getElementById("funded_bar");
+            var data_file = "/campaigns/1/get/";
+            var http_request = new XMLHttpRequest();
+            try{
+               // Opera 8.0+, Firefox, Chrome, Safari
+               http_request = new XMLHttpRequest();
+            }catch (e){
+               // Internet Explorer Browsers
+               try{
+                  http_request = new ActiveXObject("Msxml2.XMLHTTP");
+
+               }catch (e) {
+
+                  try{
+                     http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e){
+                     // Something went wrong
+                     alert("Your browser broke!");
+                     return false;
+                  }
+
+               }
+            }
+
+            http_request.onreadystatechange = function(){
+
+               if (http_request.readyState == 4  ){
+                  // Javascript function JSON.parse to parse JSON data
+                  var jsonObj = JSON.parse(http_request.responseText);
+
+                  // jsonObj variable now contains the data structure and can
+                  // be accessed as jsonObj.name and jsonObj.country.
+				  width = (jsonObj.current_amount/jsonObj.max_amount)*100;
+
+                  document.getElementById("funded_percentage").innerHTML ="Funded: "+width+"%";
+                  elem.style.width = width + '%';
+               }
+            }
+
+            http_request.open("GET", data_file, true);
+            http_request.send();
+         }
+
+ </script>
+
+</html>
